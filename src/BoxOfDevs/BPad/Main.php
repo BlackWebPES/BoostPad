@@ -17,14 +17,14 @@ use pocketmine\math\Vector3;
 use pocketmine\block\Block;
 
 class Main extends PluginBase implements Listener {
-	
+
 	public function onEnable(){
 		$this->getServer()->getPluginManager()->registerEvents($this ,$this);
 		$this->saveDefaultConfig();
 		$this->config = $this->getConfig();
-		$this->getLogger()->info(C::GREEN."Enabled");
+		$this->getLogger()->info(C::GREEN."§fEnabled");
 	}
-	
+
 	public function onMove(PlayerMoveEvent $event){
 		$player = $event->getPlayer();
 		$x = $player->getX();
@@ -46,8 +46,8 @@ class Main extends PluginBase implements Listener {
 			$player->knockBack($player, 0, $dx, $dz, $this->config->get('BoostPower'));
 		}
 	}
-	
+
 	public function onDisable(){
-		$this->getLogger()->info(C::DARK_RED."Disabled");
+		$this->getLogger()->info(C::DARK_RED."§fDisabled");
 	}
 }
