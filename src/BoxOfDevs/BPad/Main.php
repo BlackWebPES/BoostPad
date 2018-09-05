@@ -22,7 +22,7 @@ class Main extends PluginBase implements Listener {
 		$this->getServer()->getPluginManager()->registerEvents($this ,$this);
 		$this->saveDefaultConfig();
 		$this->config = $this->getConfig();
-		$this->getLogger()->info(C::GREEN."Enabled!");
+		$this->getLogger()->info(C::GREEN."Enabled");
 	}
 	
 	public function onMove(PlayerMoveEvent $event){
@@ -48,6 +48,6 @@ class Main extends PluginBase implements Listener {
 	}
 	
 	public function onDisable(){
-		$this->getLogger()->info(C::DARK_RED."Disabled!");
+		$this->getLogger()->info(C::DARK_RED."Disabled");
 	}
 }
