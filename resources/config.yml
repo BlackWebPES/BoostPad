@@ -5,7 +5,7 @@
 Block: 237
 
 # Boost Power
-BoostPower: 1
+BoostPower: 3
 
 # Enable or Disable Flame Particle.
 Particle: true
